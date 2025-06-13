@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Menu Card</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+	<!-- Bootstrap Font Icon CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Corinthia:wght@400;700&family=Great+Vibes&family=Gwendolyn:wght@400;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Meie+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rouge+Script&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+</head>
+
+<body>
+	<div class="menu-wrapper">
+		<div class="wave-container">
+      <svg viewBox="0 0 512 150" preserveAspectRatio="none">
+       <!-- Define yellow dot pattern -->
+        <defs>
+          <pattern id="dotPattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+            <circle cx="3" cy="3" r="2.5" fill="#fbc531" />
+          </pattern>
+        </defs>
+        <!-- Wave path filled with dots -->
+        <path 
+          d="M 0 100 
+            C 50 80, 70 30, 120 50 
+            C 180 80, 230 140, 280 100 
+            C 330 60, 360 30, 400 50 
+            C 450 70, 480 100, 512 90 
+            L 512 150 L 0 150 Z"
+            fill="url(#dotPattern)" 
+            stroke="orange" 
+            stroke-width="3"
+        />
+      </svg>
+    </div>
+		<!-- Menu Card Background -->
+		<div class="menu-background">
+      <!-- Additional Shapes / Effects / Images Add Here -->
+      <div class="halftone-top"></div>
+			<div class="halftone-bottom"></div>
+			<div>
+				<img src="./IMG/img4.png" class="img4">
+			</div>
+			<div>
+				<img src="./IMG/img2.png" class="img5">
+			</div>
+		</div>
+
+		<!-- Menu Card -->
+		<menu-card data='{
+      "restaurant": {
+      "name": "Shodwe Cafe",
+      "description": "Drink Menu",
+      "phone": "+91 0987654321",
+      "web": "www.reallygratsite.com",
+      "email": "reallygratsite@gmail.com"
+    },
+    "menu": [
+      {
+      "heading": "COFFEE",
+      "image": "./IMG/coffee.png",
+      "imageClass": "img1 img-hover",
+      "items": [
+        { "name": "Cafe Latte", "price": 15 },
+        { "name": "Cappucino", "price": 15 },
+        { "name": "Mochacino", "price": 15 },
+        { "name": "Americano", "price": 15 }
+      ]
+    },
+    {
+      "heading": "NON COFFEE",
+      "image": "./IMG/juice.png",
+      "imageClass": "img3 img-hover",
+      "image2": true,
+      "items": [
+        { "name": "Chocolate Ice", "price": 15 },
+        { "name": "Red Velvet", "price": 15 },
+        { "name": "Blue Mojito", "price": 15 },
+        { "name": "Hazelnut", "price": 15 }
+      ]
+    }
+  ]
+}
+' config='{"menuListItemNameClass" : "menu-list-item-name"}'></menu-card>
+	</div>
+
+	<script src="script.js"></script>
+
+</body>
+
+</html>
